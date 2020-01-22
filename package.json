@@ -1,10 +1,11 @@
 {
-  "name": "services",
+  "name": "graphqlservice",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "license": "MIT",
   "scripts": {
     "watch": "ts-node-dev --respawn index.dev.ts",
+    "start": "nodemon index.dev.ts",
     "db:migrate": "sequelize db:migrate",
     "db:migrate:undo": "sequelize db:migrate:undo"
   },
@@ -12,15 +13,18 @@
     "@types/node": "^13.1.7",
     "module-alias": "^2.2.2",
     "ts-node-dev": "^1.0.0-pre.44",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   },
   "dependencies": {
     "apollo-server": "^2.9.16",
     "apollo-server-express": "^2.9.16",
+    "apollo-server-lambda": "^2.9.16",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "nodemon": "^2.0.2",
     "pg": "^7.17.1",
     "pg-hstore": "^2.3.3",
     "reflect-metadata": "^0.1.13",
