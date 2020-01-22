@@ -31,6 +31,4 @@ app.use(
 
 apolloServer.applyMiddleware({ app, path: "/graphql" });
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.info(`BMS service listening on ${PORT}`);
-});
+app.listen({ port: process.env.PORT || 4000 });
