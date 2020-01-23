@@ -6,6 +6,7 @@
     "allowJs": true,
     "noEmit": true,
     "baseUrl": ".",
+    "jsx": "react",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",

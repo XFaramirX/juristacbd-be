@@ -6,7 +6,7 @@ import accessEnv from "@root/helpers/accessEnv";
 import resolvers from "@root/graphql/resolvers";
 import typeDefs from "@root/graphql/typeDefs";
 
-const PORT = accessEnv("PORT", 7000);
+const PORT = accessEnv("PORT", 4000);
 
 const apolloServer = new ApolloServer({
   resolvers,
@@ -31,4 +31,7 @@ app.use(
 
 apolloServer.applyMiddleware({ app, path: "/graphql" });
 
-app.listen({ port: process.env.PORT || 4000 });
+app.listen({ port: process.env.PORT || 4000 }, () => {
+  console.info(`BE service listening on ${PORT}
+  http://localhost:${PORT}/graphql`);
+});
